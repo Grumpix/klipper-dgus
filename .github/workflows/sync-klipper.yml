@@ -36,3 +36,10 @@ jobs:
           git checkout dgus-integration
           git merge master --no-edit
           git push origin dgus-integration
+      
+      - name: Merge master into dgus-main
+        run: |
+          git fetch origin dgus-main
+          git checkout dgus-main
+          git merge master --no-edit
+          git push origin dgus-main    
