@@ -2,14 +2,14 @@ name: Sync upstream
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # denně ve 3 ráno
+    - cron: '0 3 * * *'  # každý den ve 3 ráno
   workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout master
         uses: actions/checkout@v3
         with:
           ref: master
@@ -20,8 +20,19 @@ jobs:
           git config user.email 'actions@github.com'
           git remote add upstream https://github.com/Klipper3d/klipper.git
           git fetch upstream
-          git merge upstream/master --allow-unrelated-histories --no-edit || true
+
+      - name: Merge upstream/master into master
+        run: |
+          git checkout master
+          git merge upstream/master --allow-unrelated-histories --no-edit
 
       - name: Push changes
         run: |
-          git push origin master || true
+          git push origin master
+
+      - name: Merge master into dgus-integration
+        run: |
+          git fetch origin dgus-integration
+          git checkout dgus-integration
+          git merge master --no-edit
+          git push origin dgus-integration
