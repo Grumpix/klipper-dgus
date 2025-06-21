@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: master
+          token: ${{ secrets.PAT }}
 
       - name: Set up Git
         run: |
@@ -26,9 +27,8 @@ jobs:
           git checkout master
           git merge upstream/master --allow-unrelated-histories --no-edit
 
-      - name: Push changes
-        run: |
-          git push origin master
+      - name: Push changes to master
+        run: git push origin master
 
       - name: Merge master into dgus-integration
         run: |
