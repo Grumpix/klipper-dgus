@@ -31,6 +31,8 @@ jobs:
       - name: Merge master into dgus-integration
         run: |
           git fetch origin dgus-integration
+          git reset --hard
+          git clean -fd
           git checkout dgus-integration
           git merge master --no-edit || true
           git push origin dgus-integration || true
@@ -38,6 +40,8 @@ jobs:
       - name: Merge master into dgus-main
         run: |
           git fetch origin dgus-main
+          git reset --hard
+          git clean -fd
           git checkout dgus-main
           git merge master --no-edit || true
           git push origin dgus-main || true
