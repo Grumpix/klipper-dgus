@@ -1,3 +1,43 @@
+# Klipper Firmware with DWIN T5UID1 Display Support
+
+This repository contains a modified version of the Klipper firmware that integrates functionality for the **DWIN T5UID1** display, originally developed by **Desuuuu**.
+
+The changes have been updated and applied to the latest Klipper versions to ensure compatibility.
+
+---
+
+## Important Notice
+
+- This is currently a **test version**.
+- Use at your **own risk**.
+- All credits for the original patches and display support go to **Desuuuu**.
+
+---
+
+## About
+
+The original DWIN T5UID1 display support patch by Desuuuu has been adapted and merged into the up-to-date Klipper codebase. This allows users with this specific display hardware to utilize its features seamlessly with Klipper.
+
+---
+
+## Disclaimer
+
+This is not an official Klipper release. The modifications are for experimental and testing purposes only. Please back up your configurations before use.
+
+---
+
+## Credits
+
+- Original DWIN T5UID1 display patch by [Desuuuu](https://github.com/Desuuuu)
+
+---
+
+## License
+
+The licensing follows the original Klipper project license (GPLv3). Please refer to the LICENSE file for more details.
+
+
+############################################################################################
 # [ℹ️ New version available for testing](https://github.com/Desuuuu/klipper/discussions/74)
 
 Welcome to the Klipper project!
