@@ -11,7 +11,7 @@ The changes have been updated and applied to the latest Klipper versions to ensu
 - This is currently a **test version**.
 - Use at your **own risk**.
 - All credits for the original patches and display support go to **Desuuuu**.
-- You need to flash modified firmware to LCD itself - go to ## Modifications section.
+- You need to flash modified firmware to LCD itself - go to Modifications section down below.
 
 ---
 
