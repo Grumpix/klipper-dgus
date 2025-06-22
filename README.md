@@ -38,7 +38,7 @@ This is not an official Klipper release. The modifications are for experimental 
 The licensing follows the original Klipper project license (GPLv3). Please refer to the LICENSE file for more details.
 
 
-############################################################################################
+
 # [ℹ️ New version available for testing](https://github.com/Desuuuu/klipper/discussions/74)
 
 Welcome to the Klipper project!
