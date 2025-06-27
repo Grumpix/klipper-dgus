@@ -763,9 +763,10 @@ class T5UID1:
         return self.heaters.lookup_heater(heater).min_extrude_temp
 
     def probed_matrix(self):
-        if self.bed_mesh is None:
+        if self.bed_mesh is None or not hasattr(self.bed_mesh, "mesh"):
             return 0
-        count = len(self.bed_mesh.bmc.probe_helper.results)
+        mesh = self.bed_mesh.mesh
+        count = sum([len(row) for row in mesh]) if mesh else 0
         points_map = [ 0,  1,  2,  3,  4,
                        9,  8,  7,  6,  5,
                       10, 11, 12, 13, 14,
