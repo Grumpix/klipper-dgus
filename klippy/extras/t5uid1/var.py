@@ -133,6 +133,7 @@ class T5UID1_Var:
                 result.extend([0] * abs(extra_bytes))
         else:
             parts = result.strip().split(',')
+            parts = parts[:self.array_len]
             result = bytearray()
             count = 0
             for part in parts:

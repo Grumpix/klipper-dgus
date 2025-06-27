@@ -766,7 +766,11 @@ class T5UID1:
         if self.bed_mesh is None or not hasattr(self.bed_mesh, "mesh"):
             return 0
         mesh = self.bed_mesh.mesh
-        count = sum([len(row) for row in mesh]) if mesh else 0
+        # Vytvoříme seznam všech hodnot v mesh (po řádcích)
+        flat_mesh = [item for row in mesh for item in row]
+        # Omezíme na přesně 25 hodnot (pro 5x5 grid)
+        flat_mesh = flat_mesh[:25]
+        count = len(flat_mesh)
         points_map = [ 0,  1,  2,  3,  4,
                        9,  8,  7,  6,  5,
                       10, 11, 12, 13, 14,
