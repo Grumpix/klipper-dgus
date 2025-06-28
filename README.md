@@ -1,4 +1,4 @@
-# ⚠️ This is a clean unmodified Klipper, for DGUS modified version switch to dgus-integration branch. ⚠️
+# ⚠️ This is a clean unmodified Klipper, for DGUS patched version switch to dgus-integration branch. ⚠️
 
 
 Welcome to the Klipper project!
