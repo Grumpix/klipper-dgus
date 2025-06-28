@@ -1,3 +1,6 @@
+# ⚠️ This is a clean unmodified Klipper, for DGUS modified version switch to dgus-integration branch. ⚠️
+
+
 Welcome to the Klipper project!
 
 [![Klipper](docs/img/klipper-logo-small.png)](https://www.klipper3d.org/)
